@@ -23,6 +23,7 @@
                     
                     $http.post(BASE_URL + 'Users/Login', user)
                         .then(function(response) {
+                            console.log(response.data);
                             deferred.resolve(response.data);
                         }, function() {
                             

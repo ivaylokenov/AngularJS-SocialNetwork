@@ -5,14 +5,19 @@ angular.module('socialNetwork.home', [
         $routeProvider.when('/', {
             templateUrl: 'app/home/home.html',
             controller: 'HomeCtrl'
-        })
+        });
     }])
     .controller('HomeCtrl', [
-        '$scope', 
+        '$scope',
+        '$location',
         'authentication',
-        function($scope, authentication) {
+        function($scope, $location, authentication) {
             $scope.login = function (user) {
-                authentication.loginUser(user);
+                authentication.loginUser(user)
+                    .then(function(loggedInUser){
+                        console.log(loggedInUser);
+                        $location.path('/newsFeed');                        
+                    });
             };
             
             $scope.register = function (user) {
