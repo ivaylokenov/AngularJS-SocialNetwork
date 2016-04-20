@@ -12,10 +12,13 @@ angular.module('socialNetwork.home', [
         '$location',
         'authentication',
         function($scope, $location, authentication) {
+            if (authentication.isAuthenticated()) {
+                $location.path('/newsFeed');
+            }
+            
             $scope.login = function (user) {
                 authentication.loginUser(user)
                     .then(function(loggedInUser){
-                        console.log(loggedInUser);
                         $location.path('/newsFeed');                        
                     });
             };
@@ -23,7 +26,7 @@ angular.module('socialNetwork.home', [
             $scope.register = function (user) {
                 authentication.registerUser(user)
                     .then(function(registeredUser) {
-                        console.log(registeredUser);
+                        $location.path('/newsFeed'); 
                     });
             };
         }]);

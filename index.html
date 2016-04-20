@@ -50,12 +50,19 @@
         <div ng-view />
     </div>
     
+    <div data-footer></div>
+    
     <script src="app/bower_components/jquery/dist/jquery.min.js"></script>
-  <script src="app/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="app/bower_components/jquery-ui/ui/datepicker.js">
+    <script src="app/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
   <script src="app/bower_components/angular/angular.js"></script>
   <script src="app/bower_components/angular-route/angular-route.js"></script>
+  <script src="app/bower_components/angular-cookies/angular-cookies.js"></script>
   <script src="app/app.js"></script>
   <script src="app/common/main-controller.js"></script>
+  <script src="app/common/datepicker-directive.js"></script>
+  <script src="app/common/footer-directive.js"></script>
+  <script src="app/common/validate-english-directive.js"></script>
   <script src="app/users/authentication.js"></script>
   <script src="app/users/identity.js"></script>
   <script src="app/home/home-controller.js"></script>

@@ -13,7 +13,7 @@
     "html5-boilerplate": "~5.2.0",
     "bootstrap": "~3.3.6",
     "angular-sanitize": "~1.5.3",
-    "angular-cookies": "~1.5.3",
+    "angular-cookies": "~1.5.5",
     "jquery": "~2.2.2"
   }
 }
